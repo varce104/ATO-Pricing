@@ -43,6 +43,10 @@ The code comprises several formulations for the base multistage model.
 |    |    |___ SP.py\
 |    |    |___ benders.py
 
+## Instance Generation
+TBD (here all the things that involve paramaters input and the descriptions on these. The corect thing would be define maybe 3-4, all from literature)
 
+## Solver
+TBD (talk about the different models, their particularities, and things like lambda handling, output of variables, graphs, several instances, etc)
 
 
