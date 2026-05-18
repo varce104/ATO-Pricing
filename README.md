@@ -15,32 +15,32 @@ The code comprises several formulations for the base multistage model.
 |\
 |___ data\
 |    |___ generator.py\
-|    |___ params.py
-|
-|___ models
-|    |___ multistage.py
-|    |___ multistage_FP.py
-|    |___ twostage_dlt_slt.py
-|    |___ solver.py
-|
-|___ results
-|    |___ boxplot.py
-|    |___ candlestick.py
-|    |___ heatmap.py
-|    |___ var_export.py
-|    |___ lambda_export.py
-|    |___ mean_var.py
-|    |___ var_export.py
-|    |___ results_output.py
-|   
-|___ sol_approach
-|    |___ Benders
-|    |    |___ MP.py
-|    |    |___ SP.py
-|    |    |___ benders.py
-|    |
-|    |___ linealization_prop.py
-|    |___ affine_funct_app.py
+|    |___ params.py\
+|\
+|___ models\
+|    |___ multistage.py\
+|    |___ multistage_FP.py\
+|    |___ twostage_dlt_slt.py\
+|    |___ solver.py\
+|\
+|___ results\
+|    |___ boxplot.py\
+|    |___ candlestick.py\
+|    |___ heatmap.py\
+|    |___ var_export.py\
+|    |___ lambda_export.py\
+|    |___ mean_var.py\
+|    |___ var_export.py\
+|    |___ results_output.py\
+|   \
+|___ sol_approach\
+|    |___ Benders\
+|    |    |___ MP.py\
+|    |    |___ SP.py\
+|    |    |___ benders.py\
+|    |\
+|    |___ linealization_prop.py\
+|    |___ affine_funct_app.py\
 
 
 
