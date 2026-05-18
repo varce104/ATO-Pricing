@@ -34,13 +34,13 @@ The code comprises several formulations for the base multistage model.
 |    |___ results_output.py\
 |   \
 |___ sol_approach\
+|    |___ linealization_prop.py\
+|    |___ affine_funct_app.py
+|    |\
 |    |___ Benders\
 |    |    |___ MP.py\
 |    |    |___ SP.py\
-|    |    |___ benders.py\
-|    |\
-|    |___ linealization_prop.py\
-|    |___ affine_funct_app.py\
+|    |    |___ benders.py
 
 
 
