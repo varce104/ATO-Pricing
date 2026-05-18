@@ -5,21 +5,16 @@ The following library optimizes a multistage assemble-to-order model, where comp
 The code comprises several formulations for the base multistage model. 
 
 ## Code Structure
-|___ main.py
-
-|___ instances.py
-
-|___ analysis
-
-|    |___ vss.py
-
-|    |___ evpi.py
-
-|    |___ vss_ts.py
-|    |___ sto_computation.py
-|
-|___ data
-|    |___ generator.py
+|___ main.py\
+|___ instances.py\
+|___ analysis\
+|    |___ vss.py\
+|    |___ evpi.py\
+|    |___ vss_ts.py\
+|    |___ sto_computation.py\
+|\
+|___ data\
+|    |___ generator.py\
 |    |___ params.py
 |
 |___ models
