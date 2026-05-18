@@ -47,6 +47,6 @@ The code comprises several formulations for the base multistage model.
 TBD (here all the things that involve paramaters input and the descriptions on these. The corect thing would be define maybe 3-4, all from literature)
 
 ## Solver
-TBD (talk about the different models, their particularities, and things like lambda handling, output of variables, graphs, several instances, etc)
+TBD (talk about the different models, their particularities, and things like lambda handling, output of variables, graphs, several instances, optimal policies, etc)
 
 
