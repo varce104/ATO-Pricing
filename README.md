@@ -7,6 +7,7 @@ The code comprises several formulations for the base multistage model.
 ## Code Structure
 |___ main.py\
 |___ instances.py\
+|\
 |___ analysis\
 |    |___ vss.py\
 |    |___ evpi.py\
@@ -35,7 +36,7 @@ The code comprises several formulations for the base multistage model.
 |   \
 |___ sol_approach\
 |    |___ linealization_prop.py\
-|    |___ affine_funct_app.py
+|    |___ affine_funct_app.py\
 |    |\
 |    |___ Benders\
 |    |    |___ MP.py\
