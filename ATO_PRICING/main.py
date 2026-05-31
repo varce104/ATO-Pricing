@@ -20,19 +20,6 @@ scenarios = math.prod(branching)
 ##############################################
 
 
-#=============================================
-# SPECIFIC INSTANCE CONFIGS
-# Here we can use very specific instances from the literature. All will be detailed in params.py and generator.py
-# These instances include all but stages, scenarios and lead time distribution.
-
-inst = "Oh_et_al"
-
-# "Oh_et_al" -> Simple W model based on Oh et al. (2014)
-# "" ->
-# "None" -> Manual input of parameters. Beware of infeasibility!
-#=============================================
-
-
 ##############################################
 # BILL OF MATERIALS 
 # Here we have 2 options: 
@@ -103,8 +90,8 @@ det = False # False for stochastic lead times (While we tested with deterministi
 #   - VSS: Value of the Stochastic Solution
 #   - EVPI: Expected Value of Perfect Information
 #   - VSS_TS: Value of Stochastic Solution based on two stage model
-vss_calc = True
-evpi_calc = True
+vss_calc = False
+evpi_calc = False
 vss_ts_calc = False   
 ##############################################
 
@@ -119,12 +106,25 @@ lambda_benders = False   # lala
 #=============================================
 show_heatmap = False   # Save heatmaps to figures for every decision variable
 show_boxplot = False   # Save boxplot to figures for every decision variable
-show_candlestick = True   # Save candlestick to figures for every decision variable
+show_candlestick = False   # Save candlestick to figures for every decision variable
 #=============================================
-time_limit = 600
+time_limit = 900
 seed = 5
-inst = 5 # 1 for a single instance. >2 for several (mean results)
+iter = 11 # 1 for a single instance. >2 for several (mean results)
 ##############################################
+
+
+#=============================================
+# SPECIFIC INSTANCE CONFIGS
+# Here we can use very specific instances from the literature. All will be detailed in params.py and generator.py
+# These instances include all but stages, scenario tree and lead time distribution.
+
+inst = "Oh_et_al_2"
+
+# "Oh_et_al" -> Simple W model based on Oh et al. (2014)
+# "Oh_et_al_2" -> 11 x 11 instance based on Oh et al. (2014)
+# "None" -> Manual input of parameters. Beware of infeasibility!
+#=============================================
 
 
 #=============================================
@@ -132,15 +132,23 @@ inst = 5 # 1 for a single instance. >2 for several (mean results)
 # in this research we explore the ATO problem with several model formulations. They are detailed below.
 # depending on their nature, thwy will be in either the models or the sol_approach folders.
 
-Model = "MS_linear"
+Model = "MS_linear_affine"
 
 #   "MS" -> Standard multistage model.
+
 #   "MS_FP" -> multistage with pricing as first stage decision.
 
 #   "MS_linear" -> multistage with linealized revenue (MILP). 
 
 #   "MS_linear_affine" -> multistage with linealized revenue AND affine pricing policy.
+
 #   "Benders" -> Benders with affine function approximation.
+
+# Policies from literature (applied to MS_linear):
+
+#   "MS_linear_HP" -> multistage with linealized revenue AND heuristic pricing policy 2 (revenue minus holding cost).
+
+#   "MS_linear_OH_LIST" -> multistage with linealized revenue AND heuristic pricing policy 1 (max expected revenue)
 #=============================================
 
 
@@ -152,4 +160,4 @@ demand = a, b, lb_epsilon, ub_epsilon, mu_delta, std_delta
 lead_times = lb_L, ub_L, det 
 show = show_var, lambda_app, lambda_benders, show_heatmap, show_boxplot, show_candlestick, vss_calc, evpi_calc, vss_ts_calc, Model
 
-instances(size, bom, costs, price_param, demand, lead_times, show)
+instances(size, bom, costs, price_param, demand, lead_times, show, iter)
